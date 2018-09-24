@@ -9,7 +9,9 @@ def roll_call_dwarves# code an argument here
  end
 end
 
-def summon_captain_planet# code an argument here
+def summon_captain_planet
+
+  
   # Your code here
   nu_array = []
  i = 0
