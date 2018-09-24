@@ -11,7 +11,7 @@ end
 
 def summon_captain_planet
 
-  
+
   # Your code here
   nu_array = []
  i = 0
