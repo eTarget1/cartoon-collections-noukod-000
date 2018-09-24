@@ -8,8 +8,7 @@ def roll_call_dwarves# code an argument here
    i += 1
  end
 end
-
-def summon_captain_planet
+summon_captain_planet
 
 
   # Your code here
