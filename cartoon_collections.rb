@@ -1,44 +1,72 @@
 dwarves = ["Doc", "Dopey", "Bashful", "Grumpy"]
 planeteer_calls = ["earth", "wind", "fire", "water", "heart"]
-def roll_call_dwarves# code an argument here
-  # Your code here
-  i = 0
- while i < array.length
-   puts "#{i + 1}. #{array[i]}"
-   i += 1
- end
+call_screams = ["bo", "bam", "boom", "bazam", "powzer"]
+
+def roll_call_dwarves(array)
+  i = 0 
+  while i < array.length 
+    puts "#{i + 1}. #{array[i]}"
+    i += 1 
+  end 
 end
-summon_captain_planet
+
+roll_call_dwarves(dwarves)
 
 
-  # Your code here
+
+def summon_captain_planet(array)
   nu_array = []
- i = 0
- while i < array.length
-   nu_array << array[i].capitalize + "!"
-   i += 1
- end
- nu_array
+  i = 0 
+  while i < array.length 
+    nu_array << array[i].capitalize + "!"
+    i += 1 
+  end 
+  nu_array
 end
 
-def long_planeteer_calls# code an argument here
-  # Your code here
-#def long_planeteer_calls(array)
-  i = 0
+summon_captain_planet(planeteer_calls)
+
+
+def long_planeteer_calls(array) 
+  i = 0 
   if  array.any? {|i| i.length > 4}
     return true
-  else
+  else 
     return false
   i = i + 1
-  end
-#end
+  end 
 end
 
-def find_the_cheese# code an argument here
-  # the array below is here to help
+long_planeteer_calls(call_screams)
+
+
+cheese_types = ["cheddar", "gouda", "camembert"]
+snacks = ["crackers", "gouda", "thyme"]
+
+
+# This is the learn.co method that wants the cheese array inside the actual method
+def find_the_cheese(array)
   cheese_types = ["cheddar", "gouda", "camembert"]
-  while i < cheese_types.length
-    return cheese_types[i] if array.include?(cheese_types[i])
-    i += 1
-  end
+    array.find do |type|
+    cheese_types.include?(type)
+  end 
 end
+
+find_the_cheese(snacks)
+
+
+
+# This is a much better way cause the cheese array isn't included in the method.
+cheese_types = ["cheddar", "gouda", "camembert"]
+snacks = ["crackers", "gouda", "thyme"]
+
+def find_the_cheese2(array, array2)
+  cheese_types = array2
+    array.find do |type|
+    cheese_types.include?(type)
+  end 
+end
+
+find_the_cheese2(snacks, cheese_types)
+
+
